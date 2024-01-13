@@ -6,6 +6,9 @@ export default function Board() {
     //creates an array with nine elements and sets each of them to null.
     const [xIsNext, setXIsNext] = useState(true);
 
+
+
+
     function handleClick(i) {
         if (squares[i] || calculateWinner(squares)) {
             return
@@ -55,6 +58,17 @@ export default function Board() {
             <Square onClick={() => handleClick(7)} value={squares[7]}></Square>
             <Square onClick={() => handleClick(8)} value={squares[8]}></Square>
 
+            <br />
+            <br />
+            <br />
+            <button onClick={() => window.location.reload(false)}>Restart</button>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div>Developed with React</div>
+            <div>Aman</div>
+
         </>
     );
 }
@@ -68,19 +82,10 @@ function Square({ value, onClick }) {
     return (
         <>
             <button style={{
-                width: '80px',
-                height: '80px',
-                fontSize: '1.2rem',
-                backgroundColor: '#f0f0f0',
-                border: '1px solid #ccc',
-                cursor: 'pointer',
-                transition: 'background-color 0.3s ease-in-out, color 0.3s ease-in-out',
-            }}
-
-
-
-
-                onClick={onClick}>{value}</button >
+                widows: "40px",
+                height: "40px",
+                padding: "10px"
+            }} onClick={onClick}>{value}</button >
         </>
     );
 }
